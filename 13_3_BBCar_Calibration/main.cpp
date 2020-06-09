@@ -2,7 +2,7 @@
 #include "bbcar.h"
 
 Ticker servo_ticker;
-PwmOut pin8(D6), pin9(D9);
+PwmOut pin8(D6), pin9(D9); // prevent weird non-stop servo at speed 0, don't use D8&D9 same time
 
 BBCar car(pin8, pin9, servo_ticker); // servo0, servo1
 
